@@ -1,0 +1,69 @@
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 7s ease infinite;
+	height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+#title{
+    grid-column: 1/5;
+    color: rgba(221, 214, 214, 0.5);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 5vh;
+}
+
+#quick{
+    color:rgba(221, 214, 214, 0.5);
+	animation: titleMoving 5s infinite alternate;
+	font-family: sans-serif;
+
+}
+
+#easy{
+    color:rgba(221, 214, 214, 0.5);
+	animation: titleBounce 0.5s infinite alternate; 
+}
+	
+
+@keyframes titleMoving {
+	0%{
+	  top: 0vh;
+	  margin-left: 0vw;
+	}
+	20%{
+	  
+	}
+  
+	50%{
+		
+	}
+  
+	100%{
+	  top: 30vh;
+	  margin-left: 50vw;
+	  fill-opacity: 1;
+	  
+	}
+	
+  }
+
+  @keyframes titleBounce {
+	0% {transform: translateY(-5vh);} 
+	100% {transform: translateY(5vh);} 
+ } 
