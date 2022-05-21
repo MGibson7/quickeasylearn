@@ -4,7 +4,8 @@ body {
 	animation: gradient 7s ease infinite;
 	height: 100vh;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: 0.1fr, 0.5fr;
     text-align: center;
 }
 
@@ -24,7 +25,7 @@ body {
     grid-column: 1/5;
     color: rgba(221, 214, 214, 0.5);
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     font-size: 5vh;
 }
 
@@ -32,6 +33,7 @@ body {
     color:rgba(221, 214, 214, 0.5);
 	animation: titleMoving 5s infinite alternate;
 	font-family: sans-serif;
+	grid-column: 3;
 
 }
 
@@ -39,12 +41,41 @@ body {
     color:rgba(221, 214, 214, 0.5);
 	animation: titleBounce 0.5s infinite alternate; 
 }
+
+#learn{
+	animation: titleMoving2 5s infinite alternate;
+}
+
+#phone{
+	background:rgba(221, 214, 214, 0.1);
+	border:1vh solid rgba(0, 0, 0, 0.5);
+	padding-left: 2vw;
+	padding-right: 2vw;
+	padding-bottom: 20vh;
+	display: grid;
+	position: absolute;
+	grid-template-columns: repeat(4, 1fr);
+	border-radius: 5vw;
+	margin-top: 0vh;
+}
+
+img{
+	max-height: 10vh;
+	margin-left: 0.5vw;
+	margin-right: 0.5vw;
+	margin-bottom: 1vh;
+}
+
+#email{
+	display: grid;
+	grid-column: 1;
+}
 	
 
 @keyframes titleMoving {
 	0%{
 	  top: 0vh;
-	  margin-left: 0vw;
+	  margin-left: 25vw;
 	}
 	20%{
 	  
@@ -55,15 +86,35 @@ body {
 	}
   
 	100%{
-	  top: 30vh;
 	  margin-left: 50vw;
-	  fill-opacity: 1;
 	  
 	}
 	
   }
 
+
+
   @keyframes titleBounce {
 	0% {transform: translateY(-5vh);} 
 	100% {transform: translateY(5vh);} 
  } 
+
+ @keyframes titleMoving2 {
+	0%{
+	  top: 0vh;
+	  margin-right: 0vw;
+	}
+	20%{
+	  
+	}
+  
+	50%{
+		
+	}
+  
+	100%{
+	  margin-right: 50vw;
+	  
+	}
+	
+  }
